@@ -1,30 +1,13 @@
-﻿Artista artista1 = new Artista("Baco Exu do Blues");
-Console.WriteLine(artista1.Nome);
-Genero genero = new Genero();
-genero.Nome = "Rap";
+﻿Episodio episodio = new Episodio(1, "Introducción al Podcasting", 30);
+episodio.convidadoEspecial("Ana Gómez");
+Episodio episodio1 = new Episodio(2, "Entrevista con un Experto", 45);
+episodio1.convidadoEspecial("Carlos Ruiz");
+Episodio episodio2 = new Episodio(3, "Consejos para Nuevos Podcasters", 25);
+episodio2.convidadoEspecial("Laura Martínez");
 
-Album album = new Album();
-album.Titulo = "QVVJFA?";
-album.Artista = "Baco Exu do Blues";
+Podcast podcast = new Podcast("Mi Primer Podcast", "Juan Pérez");
+podcast.AddEpisodio(episodio);
+podcast.AddEpisodio(episodio1);
+podcast.AddEpisodio(episodio2);
 
-Musica musica1 = new Musica( artista1);
-musica1.Nome = "20 ligacoes";
-
-
-musica1.Genero = genero;
-musica1.Duracao = 180;
-Musica musica2 = new Musica(artista1);
-musica2.Nome = "Sulicidio";
-
-musica2.Duracao = 200;
-musica2.Genero = genero;
-
-album.AddMusica(musica1);
-album.AddMusica(musica2);
-Genero genero1 = new Genero();
-genero1.Nome = "blues";
-artista1.AddAlbum(album);
-artista1.AddMusica(musica1);
-artista1.AddMusica(musica2);
-artista1.MostrarInfo();
-
+podcast.DisplayInfo();
