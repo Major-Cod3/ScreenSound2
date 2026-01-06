@@ -1,11 +1,15 @@
 using System.ComponentModel;
 
-class Banda
+class Artista
 {
+    public Artista(string nome)
+    {
+        Nome = nome;
+    }
     List<Album> albums = new List<Album>();
     List<Musica> musicas = new List<Musica>();
     List<Genero> generos = new List<Genero>();
-    public string Nome { get; set; }
+    public string Nome { get; }
     
     
     public void AddGenero(Genero genero)
